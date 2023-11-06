@@ -26,29 +26,94 @@
         h1 {
             font-family: 'Montserrat', sans-serif;
         }
+
+        /* Add a new CSS rule to hide product cards by default */
+        #productCards {
+            display: none;
+        }
         
     </style>
 </head>
 <body>
     <!-- Use Bootstrap's container for content -->
     <div class="container">
-        <header class="text-center mt-4">
-            <img src="https://www.agri-west.com/wp-content/uploads/2019/01/AWI-logo.png" alt="Header Image" class="img-fluid">
-        </header>
-        <h1 class="text-center mt-4">Welcome to our Product Catalog</h1>
-       
-        <!-- PIN Entry Form -->
+        <!-- PIN Entry Form (initially visible) -->
         <div class="mt-4">
-            <form id="pinForm" style="display: none;">
+            <form id="pinForm">
                 <label for="pin">Enter your PIN: </label>
                 <input type="text" id="pin" maxlength="4">
                 <button type="button" onclick="checkPIN()">Submit</button>
             </form>
         </div>
 
+        <header class="text-center mt-4">
+            <img src="https://www.agri-west.com/wp-content/uploads/2019/01/AWI-logo.png" alt="Header Image" class="img-fluid">
+        </header>
+        <h1 class="text-center mt-4">Welcome to our Product Catalog</h1>
+
         <!-- Product Cards (hidden until PIN is correct) -->
-        <div id="productCards" style="display: none;">
+        <div id="productCards">
             <!-- Your product cards here -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/EnglishMuffinOnPlate_wb.jpg" class="card-img-top" alt="Breads Image" >
+                        <div class="card-body">
+                            <h5 class="card-title">Breads</h5>
+                            <a href="breads.html" class="btn btn-primary">Explore Breads</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/London_broil.jpg/1280px-London_broil.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Beef</h5>
+                            <a href="beef.html" class="btn btn-primary">Explore Beef</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Thanksgiving_Turkey.jpg/1280px-Thanksgiving_Turkey.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Poultry</h5>
+                            <a href="poultry.html" class="btn btn-primary">Explore Poultry</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQj3Ni2Q05dtMUG6yc_r3_NNj4OFOSsCmKvg&usqp=CAU" class="card-img-top" alt="Dairy Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Dairy</h5>
+                            <a href="dairy.html" class="btn btn-primary">Explore Dairy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/13-08-31-wien-redaktionstreffen-EuT-by-Bi-frie-168.jpg">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">Deli Meats</h5>
+                            <a href="deli.html" class="btn btn-primary">Explore Deli</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Flickr_-_cyclonebill_-_Bacon_%281%29.jpg/220px-Flickr_-_cyclonebill_-_Bacon_%281%29.jpg" class="card-img-top" alt="Pork Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Pork</h5>
+                            <a href="pork.html" class="btn btn-primary">Explore Pork</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- ... (Your product cards code) ... -->
+            </div>
         </div>
     </div>
 
@@ -75,73 +140,5 @@
             }
         }
     </script>
-       
-       
-       
-       
-       
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/EnglishMuffinOnPlate_wb.jpg" class="card-img-top" alt="Breads Image" >
-                    <div class="card-body">
-                        <h5 class="card-title">Breads</h5>
-                        <a href="breads.html" class="btn btn-primary">Explore Breads</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/London_broil.jpg/1280px-London_broil.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Beef</h5>
-                        <a href="beef.html" class="btn btn-primary">Explore Beef</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Thanksgiving_Turkey.jpg/1280px-Thanksgiving_Turkey.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Poultry</h5>
-                        <a href="poultry.html" class="btn btn-primary">Explore Poultry</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQj3Ni2Q05dtMUG6yc_r3_NNj4OFOSsCmKvg&usqp=CAU" class="card-img-top" alt="Dairy Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Dairy</h5>
-                        <a href="dairy.html" class="btn btn-primary">Explore Dairy</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/13-08-31-wien-redaktionstreffen-EuT-by-Bi-frie-168.jpg">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Deli Meats</h5>
-                        <a href="deli.html" class="btn btn-primary">Explore Deli</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Flickr_-_cyclonebill_-_Bacon_%281%29.jpg/220px-Flickr_-_cyclonebill_-_Bacon_%281%29.jpg" class="card-img-top" alt="Pork Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Pork</h5>
-                        <a href="pork.html" class="btn btn-primary">Explore Pork</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Include Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
