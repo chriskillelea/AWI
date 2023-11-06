@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Montserrat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .card-img-fixed {
+            width: 200px; /* Set your desired width */
+            height: 150px; /* Set your desired height */
+            object-fit: cover; /* To maintain image aspect ratio */
+        }
+
+        .card-body {
+            height: 100px; /* Set a fixed height for the card bodies */
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Use Bootstrap's container for content -->
+    <div class="container">
+        <header class="text-center mt-4">
+            <img src="https://www.agri-west.com/wp-content/uploads/2019/01/AWI-logo.png" alt="Header Image" class="img-fluid">
+        </header>
+        <h1 class="text-center mt-4">Welcome to our Product Catalog</h1>
+       
+        <!-- PIN Entry Form -->
+        <div class="mt-4">
+            <form id="pinForm" style="display: none;">
+                <label for="pin">Enter your PIN: </label>
+                <input type="text" id="pin" maxlength="4">
+                <button type="button" onclick="checkPIN()">Submit</button>
+            </form>
+        </div>
+
+        <!-- Product Cards (hidden until PIN is correct) -->
+        <div id="productCards" style="display: none;">
+            <!-- Your product cards here -->
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Define an array of valid PINs
+        var validPINs = ['1234', '5678', '9876']; // Add more PINs as needed
+
+        function checkPIN() {
+            var enteredPIN = document.getElementById('pin').value;
+
+            // Check if the entered PIN is in the validPINs array
+            if (validPINs.includes(enteredPIN)) {
+                // If the PIN is correct, hide the PIN form and show the product cards
+                document.getElementById('pinForm').style.display = 'none';
+                document.getElementById('productCards').style.display = 'block';
+            } else {
+                alert('Invalid PIN. Please try again.');
+                document.getElementById('pin').value = ''; // Clear the input field
+            }
+        }
+    </script>
+       
+       
+       
+       
+       
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/EnglishMuffinOnPlate_wb.jpg" class="card-img-top" alt="Breads Image" >
+                    <div class="card-body">
+                        <h5 class="card-title">Breads</h5>
+                        <a href="breads.html" class="btn btn-primary">Explore Breads</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/London_broil.jpg/1280px-London_broil.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Beef</h5>
+                        <a href="beef.html" class="btn btn-primary">Explore Beef</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Thanksgiving_Turkey.jpg/1280px-Thanksgiving_Turkey.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Poultry</h5>
+                        <a href="poultry.html" class="btn btn-primary">Explore Poultry</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQj3Ni2Q05dtMUG6yc_r3_NNj4OFOSsCmKvg&usqp=CAU" class="card-img-top" alt="Dairy Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Dairy</h5>
+                        <a href="dairy.html" class="btn btn-primary">Explore Dairy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/13-08-31-wien-redaktionstreffen-EuT-by-Bi-frie-168.jpg">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Deli Meats</h5>
+                        <a href="deli.html" class="btn btn-primary">Explore Deli</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Flickr_-_cyclonebill_-_Bacon_%281%29.jpg/220px-Flickr_-_cyclonebill_-_Bacon_%281%29.jpg" class="card-img-top" alt="Pork Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Pork</h5>
+                        <a href="pork.html" class="btn btn-primary">Explore Pork</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
